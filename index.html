@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>नारायण सुर्वे माहिती</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        body {
+            background-image: url('i.png');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .content-container {
+            max-width: 92%;
+            margin: 10px auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2, h3 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .author-image {
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .author-image img {
+            max-width: 100%;
+            max-height: 500px;
+            border-radius: 25px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+        p {
+            font-size: 1.2em;
+            text-align: center;
+        }
+
+        .author-image img:hover {
+            transform: scale(1.05);
+        }
+
+        ul {
+            list-style-type: none;
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 10px;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        li:before {
+            content: "•";
+            color: #4CAF50;
+            font-weight:bold;
+            position: absolute;
+            left: 0;
+            height: 10px;
+        }
+
+        .translate-btn {
+            display: block;
+            margin: 30px auto;
+            padding: 12px 25px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+        }
+        .translate-btn:hover {
+            background-color: #45a049;
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 768px) {
+            .content-container {
+                padding: 15px;
+            }
+
+            .translate-btn {
+                padding: 10px 20px;
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .content-container {
+                padding: 10px;
+            }
+
+            .translate-btn {
+                padding: 8px 15px;
+                font-size: 22px;
+            }
+
+            h1, h2, h3 {
+                font-size: 1.2em;
+            }
+
+            .author-image img {
+                max-width: 100%;
+                max-height: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="content-container">
+        <h1>नारायण सुर्वे</h1>
+        <div class="author-image">
+            <img src="image.png" alt="नारायण सुर्वे">
+        </div>
+
+        <div id="marathi-content">
+            <p>(१५ ऑक्टोबर १९२६ - १६ ऑगस्ट २०१०)</p>
+            <p>समाजातील उपेक्षित आणि कामगार वर्ग व्यथा, वेदना आणि आशा आपल्या कवितेतून सिद्धहस्तपणे मांडणाऱ्या नारायण सुर्वे यांना “ जान्हवी” असेही म्हटले जाते. सोप्या, प्रभावी, बोली व सर्व सामन्यांना समजेल अशा भाषेत त्यांनी कामगारांच्या शोषणा विरुद्धचा आक्रोश, गरिबी, विषमतेवर टीका, प्रेम, आशा असे भाव कवितेत व्यक्त केले. “ सोव्हिएत लँड नेहरू पुरस्कार”, “ पद्मश्री पुरस्काराने सन्मानित नारायण सुर्वे यांची कविता आजही मराठी साहित्यात व जनमानात आदराने स्मरण केली जाते.</p>
+
+            <h2>महत्वाचे साहित्यिक योगदान:</h2>
+            <h3>कविता संग्रह:</h3>
+            <ul>
+                <li>माझे विद्यापीठ</li>
+                <li>जाहिरनामा</li>
+                <li>ऐसा गा मी ब्रम्ह</li>
+                <li>पुन्हा एकदा</li>
+                <li>सनद</li>
+                <li>नव्या माणसाचे आगमन</li>
+            </ul>
+
+            <h3>पुरस्कार:</h3>
+            <ul>
+                <li>जनस्थान पुरस्कार</li>
+                <li>कबीर पुरस्कार</li>
+                <li>पद्मश्री</li>
+                <li>सोव्हिएत लँड नेहरू पुरस्कार</li>
+                <li>नरसिंह मेहता पुरस्कार</li>
+                <li>महाराष्ट्र फाउंडेशन पुरस्कार</li>
+            </ul>
+        </div>
+
+        <button class="translate-btn">English </button>
+    </div>
+
+    <script>
+        const translateBtn = document.querySelector(".translate-btn");
+        const marathiContent = document.getElementById("marathi-content");
+        let isMarathi = true;
+
+        translateBtn.addEventListener("click", function() {
+            if (isMarathi) {
+                // Switch to English
+                translateBtn.textContent = "मराठी ";
+                document.documentElement.lang = "en";
+                marathiContent.innerHTML = `
+                    <p>(15 October 1926 - 16 August 2010)</p>
+                    <p>Narayan Surve, who skillfully portrayed the sufferings, pains, and hopes of the neglected and working class in his poetry, is also known as "Janhavi". In simple, effective, colloquial, and easily understandable language, he expressed emotions such as the outcry against the exploitation of workers, criticism of poverty and inequality, love, and hope in his poetry. Honored with the "Soviet Land Nehru Award" and "Padma Shri Award", Narayan Surve's poetry is still remembered with respect in Marathi literature and among the masses.</p>
+
+                    <h2>Important Literary Contributions:</h2>
+                    <h3>Poetry Collections:</h3>
+                    <ul>
+                        <li>Maze Vidyapeeth</li>
+                        <li>Jahirnama</li>
+                        <li>Aisa Ga Mi Brahma</li>
+                        <li>Punha Ekda</li>
+                        <li>Sanad</li>
+                        <li>Navya Manasache Aagman</li>
+                    </ul>
+
+                    <h3>Awards:</h3>
+                    <ul>
+                        <li>Janasthan Award</li>
+                        <li>Kabir Award</li>
+                        <li>Padma Shri</li>
+                        <li>Soviet Land Nehru Award</li>
+                        <li>Narsinh Mehta Award</li>
+                        <li>Maharashtra Foundation Award</li>
+                    </ul>
+                `;
+            } else {
+                // Switch back to Marathi
+                document.documentElement.lang = "mr";
+                location.reload();
+            }
+            isMarathi = !isMarathi;
+        });
+    </script>
+</body>
+</html></html>
